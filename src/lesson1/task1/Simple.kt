@@ -38,6 +38,8 @@ fun quadraticEquationRoot(a: Double, b: Double, c: Double) =
  *
  * Поиск произведения корней квадратного уравнения
  */
+//fun angleInRadian(deg: Int, min: Int, sec: Int): Double = (deg * (PI/180) + min * (PI/180 * 60) + sec * (PI/180 * 60 * 60))
+
 fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
     val sd = sqrt(discriminant(a, b, c))
     val x1 = (-b + sd) / (2 * a)
@@ -46,12 +48,27 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
 }
 
 /**
- * Пример главной функции
+ * Пример
+ *
+ * Поиск третьего числа
  */
-fun main() {
-    val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
-    println("Root product: $x1x2")
+fun thirdDigit(number: Int): Int = (number % 1000) / 100
+
+
+fun main (args: Array<String>) {
+    val answer = thirdDigit (
+        8401
+    )
+
+    println(answer)
 }
+
+
+
+
+//fun main (args: Array<String>) {    val answer = angleInRadian (        36,14,35    )    println(answer) }
+
+
 
 /**
  * Тривиальная
@@ -92,7 +109,7 @@ fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double = TODO()
  * Пользователь задает целое число, большее 100 (например, 3801).
  * Определить третью цифру справа в этом числе (в данном случае 8).
  */
-fun thirdDigit(number: Int): Int = TODO()
+//fun thirdDigit(number: Int): Int = TODO()
 
 /**
  * Простая
